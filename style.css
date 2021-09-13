@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 1em;
+    font-size: 1em;  
 }
 body{    
+    background: #434343 74%;
     font-family: 'Open Sans', sans-serif;
-    background-color: #222;
     color: orange;
+    max-width: 100vw;
 }
 .logo{
     background: transparent;
@@ -24,15 +25,6 @@ body{
     max-width: 10%;
     margin-left: 30px;
 }
-/*@media screen and (max-width : 1000px) {
-    #img{
-        max-width: 10%;
-    }
-    #header{
-        margin: auto;
-        padding: 0;
-    }
-}*/
 #header{
     margin-left: 15px; 
     font-size: 1.5em;
@@ -41,6 +33,7 @@ body{
 }
 ul{
     list-style-type: none;
+    padding-bottom: 25px;
 }
 #list a{
     text-decoration: none;
@@ -63,8 +56,7 @@ a:hover{
     font-size: 1.1em;
 }
 #inp{
-    width: 50%;
-    margin: 20px auto;
+    margin: 20px 0;
     justify-self: center;
 }
 input{
@@ -153,4 +145,99 @@ h2:hover{
       transition: 0.5s;
       transform: scale(1.4);
   }
+  .packages{
+      max-width: 70%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+  }
+  #p1, #p2, #p3{
+      border: 5px orange dashed;
+      width: 30%;
+      text-align: center;
+      transition: 0.3s;
+      
+  }
+  .packages li{
+      margin: 5px 0;
+  }
+  h3{
+      padding: 20px 0;
+      font-size: 1.3em;
+      background-color: orange;
+      opacity: 0.6;
+      color: white;
+  }
+  #p1:hover, #p2:hover, #p3:hover{
+      transform: scale(1.2);
+      border: 5px solid;
+      opacity: 1;
+      background-color: black;
+  }
+  #p1:hover > h3, #p2:hover > h3, #p3:hover > h3{
+      opacity: 1;
+  }
+  h3:hover{
+     text-shadow:0 0 10px yellow;
+  }
+  .prc{
+      font-weight: bold;
+      font-size: 1.1em;
+      padding: 10px 0;
+  }
+  ul:hover > .prc, ul:hover > h3, ul:hover > h3{
+    text-shadow:0 0 10px yellow;
+}
+h4{
+    margin: 60px 0;
+    text-align: center;
+    font-size: 1.8em;
+    text-shadow: 0 0 10px yellow;
+}
+.tmg{
+    display: flex;
+    justify-content: space-around;
+    margin: 60px auto;
+    line-height: 80px;
+    text-align: center;
+}
+.crc{
+    height: 160px;
+    width: 160px;
+    border-radius: 100%;
+    padding: 30px;  
+    transition: 0.3s ease;
+}
+.crc:hover{
+    border: 5px orange solid;
+    background-color: black;
     
+}
+  @media screen and (max-width : 600px) {
+    #img{
+        max-width: 20%;
+    }
+    #header{
+        margin: auto;
+        padding: 0;
+    }
+    .top{
+        margin: 20px 0;
+    }
+    .packages{
+        display: block;
+        margin: 0 auto;
+    }
+    #p1, #p2, #p3{
+        width: 100%;
+        margin: 30px 0;
+    }
+    .tmg{
+    display: block;
+    }
+    .crc{
+        width: 50%;
+        margin: auto;
+       
+    }
+}
